@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import roman from './roman'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component{
+    
+    state = {
+        text: ""
+    }
+
+    onInputChange = (event) => {
+        this.setState({text: event.target.value})
+    }
+
+    render(){
+        return( 
+            <React.Fragment>
+                <h1>
+                    Roman Numeral Converter
+                </h1>
+
+                <div className="column-container">
+                    <input type="text" className="field" value={this.state.text} onChange={this.onInputChange} placeholder="Example: MXCVIII"/>
+                    <p className="field">{roman(this.state.text)}</p>
+                </div>
+            </React.Fragment>
+        )
+    }
 }
 
 export default App;

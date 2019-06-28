@@ -1,33 +1,59 @@
-.App {
-  text-align: center;
+
+*{
+    box-sizing: border-box;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    background: url("../src/images/art-ball-blur-235615.jpg") center no-repeat;
+    filter: grayscale(100%);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1{
+    color: midnightblue
 }
 
-.App-link {
-  color: #61dafb;
+#root{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.column-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 404px;
+    height: 400px;
+    border: 1px solid rgb(204, 203, 203);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.field{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    font-size: 24px;
+    height: 50px;
+    padding: 8px;
+    border: 1px solid rgb(204, 203, 203);
+    width: 80%;
+    border-radius: 5px;
+    background-color: white;
+}
+
+input.field{
+    text-align: right;
+}
+
+.field:focus{
+    outline: none;
 }
